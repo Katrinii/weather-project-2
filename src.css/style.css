@@ -1,0 +1,168 @@
+body {
+  position: relative;
+  unicode-bidi: isolate;
+  display: block;
+  min-width: 800px;
+  font-family: "Rubik", serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/156/234/original/AI_Picture_A_%28morning_light_theme%29.jpg?1738345410/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
+}
+.container {
+  background: linear-gradient(
+    180deg,
+    rgb(152, 192, 175) 0.5%,
+    rgb(254, 211, 180) 100%
+  );
+  margin: 0 auto;
+  border: none;
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: 20px;
+  max-width: 900px;
+  color: rgb(46, 75, 86);
+}
+header {
+  max-height: 250px;
+}
+
+footer {
+  color: rgb(50, 86, 90);
+  text-align: center;
+}
+a {
+  color: rgb(126, 147, 148);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: rgb(144, 169, 182);
+}
+.search-box {
+  text-align: left;
+  font-size: 30px;
+  background-color: rgb(117, 164, 160);
+  border: none;
+  margin-right: 20px;
+  padding: 20px 30px 20px 20px;
+  border-radius: 7px;
+  box-shadow: 0 5px 30px rgba(46, 75, 86, 0.3);
+  letter-spacing: 4px;
+  color: rgb(219, 230, 240);
+}
+.search-box::placeholder {
+  color: rgb(219, 230, 240);
+}
+.search-button {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(46, 75, 86);
+  padding: 20px 30px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(225, 236, 246);
+  box-shadow: 0 5px 30px rgba(46, 75, 86, 0.3);
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+}
+.search-button:hover {
+  color: rgba(46, 75, 86, 0.7);
+}
+.forms {
+  max-width: 600px;
+  display: block;
+  transform: translate(340px, -250px);
+}
+
+dotlottie-player {
+  transform: translate(-30px, -30px);
+}
+.headings {
+  max-height: fit-content;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  transform: translate(220px, -370px);
+}
+h1 {
+  font-size: 70px;
+}
+h2 {
+  font-size: 30px;
+  transform: translate(-15px, 20px);
+}
+/*.headings {
+  margin: none;
+  max-width: 100px;
+  max-height: 130px;
+  display: block;
+  transform: translate(220px, -370px);
+}
+/*edit variable font size through javascript code:
+
+html: <h1 id="dynamic-heading">This is a very long heading</h1>
+
+js: function adjustHeadingSize() {
+  const heading = document.getElementById("dynamic-heading");
+  const textLength = heading.textContent.length;
+
+  let fontSize;
+  if (textLength < 10) {
+    fontSize = "50px";
+  } else if (textLength < 20) {
+    fontSize = "40px";
+  } else if (textLength < 30) {
+    fontSize = "30px";
+  } else {
+    fontSize = "20px"; // Smaller for long text
+  }
+
+  heading.style.fontSize = fontSize;
+}
+
+adjustHeadingSize();
+window.addEventListener("resize", adjustHeadingSize);
+*/
+ul {
+  list-style: none;
+  transform: translate(185px, -430px);
+  color: rgb(91, 105, 106);
+  font-size: 20px;
+  max-width: 100px;
+}
+.container-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  background-color: rgb(219, 230, 240);
+  max-width: 390px;
+  transform: translate(360px, -545px);
+  padding: 12px 100px 12px 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(46, 75, 86, 0.3);
+}
+h3 {
+  margin: 0;
+  font-size: 50px;
+}
+h4 {
+  margin: 0;
+  font-size: 20px;
+  text-align: right;
+  transform: translateY(36px);
+  font-weight: 400;
+  color: rgb(91, 105, 106);
+}

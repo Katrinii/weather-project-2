@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src.css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Katrin's Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <dotlottie-player
+          src="https://lottie.host/4d84425f-6512-4a81-a474-bab5ca58fb04/Li9a1YLWfv.lottie"
+          background="transparent"
+          speed="0.7"
+          style="width: 250px; height: 250px"
+          loop
+          autoplay
+        >
+        </dotlottie-player>
+
+        <div class="forms">
+          <form>
+            <input
+              type="search"
+              placeholder="Enter a city . . ."
+              required
+              class="search-box"
+            />
+            <input type="submit" value="Search" class="search-button" />
+          </form>
+        </div>
+        <div class="headings">
+          <h1>0</h1>
+          <h2>°C</h2>
+        </div>
+        <ul>
+          <li>0°F</li>
+          <li>Mon 1st</li>
+          <li>0%</li>
+          <li>0% m/h</li>
+        </ul>
+
+        <div class="container-2">
+          <h3>City</h3>
+          <h4>00:00</h4>
+        </div>
+      </header>
+      <br />
+      <footer>
+        Coded by:
+        <a
+          href="https://www.shecodes.io/graduates/133172-katrin-ivanova"
+          target="_blank"
+          >Katrin Ivanova.</a
+        >
+        Hosted on
+        <a href="https://github.com/Katrinii/Project-remake" target="_blank"
+          >GitHub</a
+        >
+        and
+        <a href="https://katrinsweatherapp.netlify.app/" target="_blank"
+          >Netlify.</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
