@@ -143,6 +143,7 @@ ul {
   max-width: 100px;
 }
 .container-2 {
+  letter-spacing: 1px;
   display: flex;
   flex-direction: row;
   gap: 2px;
