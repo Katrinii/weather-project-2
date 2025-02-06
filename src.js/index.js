@@ -16,7 +16,6 @@ function refreshWeather(response) {
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = temperatureCelsius;
   humidityDisplay.innerHTML = response.data.main.humidity;
-  //let humidity = humidityDisplay.innerHTML;
   windDisplay.innerHTML = windSpeedMph;
   farenheitElement.innerHTML = temperatureFarenheit;
 
