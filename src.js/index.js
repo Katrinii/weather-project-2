@@ -3,9 +3,14 @@ function refreshWeather(response) {
   let temperatureKelvin = response.data.main.temp;
   let temperatureCelsius = Math.round(temperatureKelvin - 273.15);
   let cityElement = document.querySelector("#city-name");
+  let dateDisplay = document.querySelector("#humidity-percentage");
+
+  console.log(response.data.main.humidity);
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = temperatureCelsius;
+  dateDisplay.innerHTML = response.data.main.humidity;
+  let humidity = `${dateDisplay.innerHTML}%`;
 }
 
 function searchCity(city) {
