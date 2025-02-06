@@ -3,7 +3,7 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperatureKelvin = response.data.main.temp;
   let temperatureCelsius = Math.round(temperatureKelvin - 273.15);
-  let dateDisplay = document.querySelector("#humidity-percentage");
+  let humidityDisplay = document.querySelector("#humidity-percentage");
   let windDisplay = document.querySelector("#wind-speed");
   let windSpeedSpm = response.data.wind.speed;
   let windSpeedMph = Math.round(windSpeedSpm * 2.23694);
@@ -15,8 +15,8 @@ function refreshWeather(response) {
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = temperatureCelsius;
-  dateDisplay.innerHTML = response.data.main.humidity;
-  let humidity = `${dateDisplay.innerHTML}`;
+  humidityDisplay.innerHTML = response.data.main.humidity;
+  //let humidity = humidityDisplay.innerHTML;
   windDisplay.innerHTML = windSpeedMph;
   farenheitElement.innerHTML = temperatureFarenheit;
 
