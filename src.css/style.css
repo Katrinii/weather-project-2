@@ -82,7 +82,7 @@ a:hover {
 .forms {
   max-width: 600px;
   display: block;
-  transform: translate(340px, -250px);
+  transform: translate(350px, -250px);
 }
 
 dotlottie-player {
