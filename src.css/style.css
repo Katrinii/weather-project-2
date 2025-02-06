@@ -31,6 +31,7 @@ body::before {
   margin-top: 40px;
   padding: 20px;
   max-width: 900px;
+  min-width: 900px;
   color: rgb(46, 75, 86);
 }
 header {
