@@ -48,13 +48,13 @@ function updateLottieAnimation(temp) {
 
   // Create the Lottie player element
   let lottiePlayer = document.createElement("dotlottie-player");
-  lottiePlayer.src = lottieSrc;
-  lottiePlayer.background = "transparent";
-  lottiePlayer.speed = "1";
+  lottiePlayer.setAttribute("src", lottieSrc);
+  lottiePlayer.setAttribute("background", "transparent");
+  lottiePlayer.setAttribute("speed", "1");
   lottiePlayer.style.width = "300px";
   lottiePlayer.style.height = "300px";
-  lottiePlayer.loop = true;
-  lottiePlayer.autoplay = true;
+  lottiePlayer.setAttribute("loop", "true");
+  lottiePlayer.setAttribute("autoplay", "true");
 
   // Add the Lottie animation to the container
   lottieContainer.appendChild(lottiePlayer);
