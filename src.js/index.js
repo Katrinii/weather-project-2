@@ -50,7 +50,7 @@ function updateLottieAnimation(temp) {
   let lottiePlayer = document.createElement("dotlottie-player");
   lottiePlayer.setAttribute("src", lottieSrc);
   lottiePlayer.setAttribute("background", "transparent");
-  lottiePlayer.setAttribute("speed", "1");
+  lottiePlayer.setAttribute("speed", "0.7");
   lottiePlayer.style.width = "300px";
   lottiePlayer.style.height = "300px";
   lottiePlayer.setAttribute("loop", "true");
