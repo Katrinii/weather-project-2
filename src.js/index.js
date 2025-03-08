@@ -20,8 +20,6 @@ function refreshWeather(response) {
   farenheitElement.innerHTML = `${temperatureFarenheit}°F`;
 
   console.log(response.data);
-
-  //fix %, m/h, °F bug//
 }
 
 function searchCity(city) {

@@ -86,9 +86,6 @@ a:hover {
   transform: translate(350px, -250px);
 }
 
-dotlottie-player {
-  transform: translate(-30px, -30px);
-}
 .headings {
   max-height: fit-content;
   max-width: fit-content;
