@@ -20,6 +20,7 @@ body::before {
   z-index: -1;
 }
 .container {
+  position: relative;
   background: linear-gradient(
     180deg,
     rgb(152, 192, 175) 0.5%,
@@ -33,9 +34,11 @@ body::before {
   max-width: 900px;
   min-width: 900px;
   color: rgb(46, 75, 86);
+  padding-left: 0px;
 }
 header {
   max-height: 250px;
+  transform: translateY(-90px);
 }
 
 footer {
@@ -164,4 +167,12 @@ h4 {
   transform: translateY(28px);
   font-weight: 400;
   color: rgb(91, 105, 106);
+}
+#lottie-container {
+  z-index: 10;
+  display: block;
+  transform: translate(-140px, 20px);
+}
+.headings-and-list {
+  transform: translateX(-10px);
 }

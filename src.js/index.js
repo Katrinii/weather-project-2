@@ -51,8 +51,8 @@ function updateLottieAnimation(temp) {
   lottiePlayer.setAttribute("src", lottieSrc);
   lottiePlayer.setAttribute("background", "transparent");
   lottiePlayer.setAttribute("speed", "0.7");
-  lottiePlayer.style.width = "300px";
-  lottiePlayer.style.height = "300px";
+  lottiePlayer.style.width = "350px";
+  lottiePlayer.style.height = "350px";
   lottiePlayer.setAttribute("loop", "true");
   lottiePlayer.setAttribute("autoplay", "true");
 
