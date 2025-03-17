@@ -1,3 +1,16 @@
+function updateDateTime(timezoneDifference) {
+  let now = new Date();
+
+  let utcTime = now.getTime() + now.getTimezoneDifference() * 60000;
+  let localTime = new Date(utcTime + timezoneDifference * 1000);
+
+  let hours = localTime.getHours().toString().padStart(2, "0");
+  let minutes = localTime.getMinutes().toString().padStart(2, "0");
+  let formattedTime = `${hours}:${minutes}`;
+
+  document.querySelector("#local-time").innerHTML = formattedTime;
+}
+//
 function refreshWeather(response) {
   let cityElement = document.querySelector("#city-name");
   let temperatureElement = document.querySelector("#temperature");
@@ -19,8 +32,8 @@ function refreshWeather(response) {
   windDisplay.innerHTML = `${windSpeedMph} m/h`;
   farenheitElement.innerHTML = `${temperatureFarenheit}°F`;
 
+  //updateDateTime(response.data.timezone);
   updateLottieAnimation(temperatureCelsius);
-
   console.log(response.data);
 }
 function updateLottieAnimation(temp) {
