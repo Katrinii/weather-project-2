@@ -104,38 +104,6 @@ h2 {
   font-size: 30px;
   transform: translate(-15px, 20px);
 }
-/*.headings {
-  margin: none;
-  max-width: 100px;
-  max-height: 130px;
-  display: block;
-  transform: translate(220px, -370px);
-}
-/*edit variable font size through javascript code:
-
-html: <h1 id="dynamic-heading">This is a very long heading</h1>
-
-js: function adjustHeadingSize() {
-  const heading = document.getElementById("dynamic-heading");
-  const textLength = heading.textContent.length;
-
-  let fontSize;
-  if (textLength < 10) {
-    fontSize = "50px";
-  } else if (textLength < 20) {
-    fontSize = "40px";
-  } else if (textLength < 30) {
-    fontSize = "30px";
-  } else {
-    fontSize = "20px"; // Smaller for long text
-  }
-
-  heading.style.fontSize = fontSize;
-}
-
-adjustHeadingSize();
-window.addEventListener("resize", adjustHeadingSize);
-*/
 ul {
   list-style: none;
   transform: translate(185px, -430px);

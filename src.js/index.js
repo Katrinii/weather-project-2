@@ -1,16 +1,25 @@
-function updateDateTime(timezoneDifference) {
+function updateDateTime(timezoneOffset) {
   let now = new Date();
 
-  let utcTime = now.getTime() + now.getTimezoneDifference() * 60000;
-  let localTime = new Date(utcTime + timezoneDifference * 1000);
+  let utcTime = now.getTime() + now.getTimezoneOffset() * 60000;
+  let localTime = new Date(utcTime + timezoneOffset * 1000);
 
   let hours = localTime.getHours().toString().padStart(2, "0");
   let minutes = localTime.getMinutes().toString().padStart(2, "0");
   let formattedTime = `${hours}:${minutes}`;
 
+  let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = localTime.getDate();
+  let daySuffix = "th";
+  if (day === 1 || day === 21 || day === 31) daySuffix = "st";
+  else if (day === 2 || day === 22) daySuffix = "nd";
+  else if (day === 3 || day === 23) daySuffix = "rd";
+
+  let formattedDate = `${dayNames[localTime.getDay()]} ${day}${daySuffix}`;
+
   document.querySelector("#local-time").innerHTML = formattedTime;
+  document.querySelector("#date").innerHTML = formattedDate;
 }
-//
 function refreshWeather(response) {
   let cityElement = document.querySelector("#city-name");
   let temperatureElement = document.querySelector("#temperature");
@@ -32,24 +41,21 @@ function refreshWeather(response) {
   windDisplay.innerHTML = `${windSpeedMph} m/h`;
   farenheitElement.innerHTML = `${temperatureFarenheit}°F`;
 
-  //updateDateTime(response.data.timezone);
+  updateDateTime(response.data.timezone);
   updateLottieAnimation(temperatureCelsius);
   console.log(response.data);
 }
 function updateLottieAnimation(temp) {
   let lottieContainer = document.querySelector("#lottie-container");
 
-  // If the container doesn't exist, create it inside the header
   if (!lottieContainer) {
     lottieContainer = document.createElement("div");
     lottieContainer.id = "lottie-container";
     document.querySelector("header").prepend(lottieContainer);
   }
 
-  // Clear any previous Lottie animation
   lottieContainer.innerHTML = "";
 
-  // Choose the correct Lottie animation based on temperature
   let lottieSrc;
   if (temp > 17) {
     lottieSrc =
@@ -59,7 +65,6 @@ function updateLottieAnimation(temp) {
       "https://lottie.host/c2038e32-5c7e-4746-b389-f93f60261f1d/b2GsH7cm7d.lottie"; // Cold icon
   }
 
-  // Create the Lottie player element
   let lottiePlayer = document.createElement("dotlottie-player");
   lottiePlayer.setAttribute("src", lottieSrc);
   lottiePlayer.setAttribute("background", "transparent");
@@ -69,7 +74,6 @@ function updateLottieAnimation(temp) {
   lottiePlayer.setAttribute("loop", "true");
   lottiePlayer.setAttribute("autoplay", "true");
 
-  // Add the Lottie animation to the container
   lottieContainer.appendChild(lottiePlayer);
 }
 
