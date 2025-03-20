@@ -144,11 +144,23 @@ h4 {
 .headings-and-list {
   transform: translateX(-10px);
 }
-/*.weekly-forecast {
-  display: flex;
-  justify-content: space-around;
-}*/
 
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.weekly-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff52;
+  border-radius: 10px;
+  min-width: 100px;
+}
 .weekly-forecast-day {
   text-align: center;
 }
