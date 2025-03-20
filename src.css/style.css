@@ -144,3 +144,18 @@ h4 {
 .headings-and-list {
   transform: translateX(-10px);
 }
+.weekly-forecast {
+  /*display: inline-flex;*/
+  text-align: center;
+}
+.weekly-forecast-icon {
+  font-size: 40px;
+}
+.weekly-forecast-temperatures {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.low-temp {
+  padding-left: 7px;
+}
