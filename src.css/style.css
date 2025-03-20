@@ -44,6 +44,7 @@ header {
 footer {
   color: rgb(50, 86, 90);
   text-align: center;
+  font-weight: lighter;
 }
 a {
   color: rgb(126, 147, 148);
@@ -110,6 +111,7 @@ ul {
   color: rgb(91, 105, 106);
   font-size: 20px;
   max-width: 100px;
+  font-weight: lighter;
 }
 .container-2 {
   letter-spacing: 1px;
@@ -133,7 +135,7 @@ h4 {
   font-size: 20px;
   text-align: right;
   transform: translateY(28px);
-  font-weight: 400;
+  font-weight: lighter;
   color: rgb(91, 105, 106);
 }
 #lottie-container {
@@ -149,7 +151,7 @@ main {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 .weekly-forecast {
@@ -157,22 +159,33 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  background-color: #ffffff52;
+  background-color: #ffffff27;
   border-radius: 10px;
-  min-width: 100px;
+  min-width: 120px;
+  box-shadow: 0 5px 30px rgba(46, 75, 86, 0.1);
 }
+
 .weekly-forecast-day {
   text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgba(91, 105, 106, 0.9);
 }
 .weekly-forecast-icon {
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
 }
 .weekly-forecast-temperatures {
   text-align: center;
   display: flex;
   justify-content: center;
+  font-size: 20px;
+  font-weight: lighter;
 }
 .low-temp {
   padding-left: 7px;
+  color: #2d4b567e;
+}
+.high-temp {
+  color: rgb(91, 105, 106);
 }
