@@ -189,3 +189,6 @@ main {
 .high-temp {
   color: rgb(91, 105, 106);
 }
+#forecast {
+  padding: 0px;
+}

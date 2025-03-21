@@ -89,8 +89,20 @@ function handleSearchAndSubmit(event) {
 
   searchCity(searchInput.value);
 }
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = `<div class="weekly-forecast">
+          <div class="weekly-forecast-day">Day</div>
+          <div class="weekly-forecast-icon">🌤️</div>
+          <div class="weekly-forecast-temperatures">
+            <div class="high-temp">15°</div>
+            <div class="low-temp">9°</div>
+          </div>
+        </div>`;
+}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchAndSubmit);
 
 searchCity("London");
+displayForecast();
