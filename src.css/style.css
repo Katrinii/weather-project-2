@@ -180,8 +180,10 @@ main {
   color: rgb(91, 105, 106);
 }
 .weekly-forecast-icon {
-  font-size: 40px;
+  width: 100px;
+  height: 60px;
   text-align: center;
+  transform: scale(90%) translateY(-22px);
 }
 .weekly-forecast-temperatures {
   text-align: center;
