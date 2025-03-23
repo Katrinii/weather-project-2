@@ -93,6 +93,7 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   let forecastHtml = "";
 
