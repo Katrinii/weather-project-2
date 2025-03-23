@@ -43,6 +43,8 @@ function refreshWeather(response) {
 
   updateDateTime(response.data.timezone);
   updateLottieAnimation(temperatureCelsius);
+  getForecast(response.data.name);
+
   console.log(response.data);
 }
 function updateLottieAnimation(temp) {
@@ -99,24 +101,23 @@ function getForecast(city) {
 
 function displayForecast(response) {
   console.log(response.data);
-  let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-
   let forecastHtml = "";
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `<div class="weekly-forecast">
-          <div class="weekly-forecast-day">${day}</div>
-          <div class="weekly-forecast-icon">🌤️</div>
+          <div class="weekly-forecast-day">tue</div>
+          <div class="weekly-forecast-icon"><img src="${
+            day.condition.icon_url
+          }"/></div>
           <div class="weekly-forecast-temperatures">
-            <div class="high-temp">15°</div>
-            <div class="low-temp">9°</div>
+            <div class="high-temp">${Math.round(day.temperature.maximum)}</div>
+            <div class="low-temp">${Math.round(day.temperature.minimum)}</div>
           </div>
         </div>`;
   });
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -124,5 +125,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchAndSubmit);
 
 searchCity("London");
-getForecast("Paris");
-//displayForecast();
