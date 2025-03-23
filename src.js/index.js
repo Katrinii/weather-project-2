@@ -118,8 +118,8 @@ function displayForecast(response) {
             day.condition.icon_url
           }"/></div>
           <div class="weekly-forecast-temperatures">
-            <div class="high-temp">${Math.round(day.temperature.maximum)}</div>
-            <div class="low-temp">${Math.round(day.temperature.minimum)}</div>
+            <div class="high-temp">${Math.round(day.temperature.maximum)}°</div>
+            <div class="low-temp">${Math.round(day.temperature.minimum)}°</div>
           </div>
         </div>`;
   });
