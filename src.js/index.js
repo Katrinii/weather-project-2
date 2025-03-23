@@ -92,6 +92,12 @@ function handleSearchAndSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "b6t3cfd0645ebc0e3f49539d885oa6a4";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -107,7 +113,7 @@ function displayForecast(response) {
     forecastHtml =
       forecastHtml +
       `<div class="weekly-forecast">
-          <div class="weekly-forecast-day">tue</div>
+          <div class="weekly-forecast-day">${formatDay(day.time)}</div>
           <div class="weekly-forecast-icon"><img src="${
             day.condition.icon_url
           }"/></div>
